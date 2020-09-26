@@ -7,9 +7,13 @@
 </head>
 <body>
     
+    <a href="lista_contato.php">listar</a>
+
+    <a href="apaga_contato.php">apagar</a>
+
     cadastre seu contato
     <br>
-    <form action="pdo.php" method="post">
+    <form action="grava_contato.php" method="post">
 
         nome:<input type="text" name="nome" id="nome"><br>
         whatsapp: <input type="text" name="whats" id="whats"><br>
