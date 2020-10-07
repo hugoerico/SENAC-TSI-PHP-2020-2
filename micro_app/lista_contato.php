@@ -12,10 +12,12 @@ $lista_sql = '	SELECT
 				ORDER BY 
 					nome';
 
-foreach ( $objBanco->query( $lista_sql ) as $registro) {
-	
-	$tabela[$registro['id']] = [ 	'nome' => $registro['nome'], 
-									'whatsapp' => $registro['whatsapp'] ];
+foreach ($objBanco->query($lista_sql) as $registro) {
+
+    $tabela[$registro['id']] = [
+        'nome' => $registro['nome'],
+        'whatsapp' => $registro['whatsapp']
+    ];
 }
 
 //Chama o template (front-end)
