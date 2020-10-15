@@ -14,4 +14,4 @@ if ( $objBanco->exec("DELETE FROM contatos WHERE id = $id") !== false ) {
 	$msg = 'errooou';
 }
 
-include 'apaga_contato_tpl.php';
+include 'apaga_contato.tpl.php';

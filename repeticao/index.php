@@ -31,7 +31,7 @@ $quinta  =4;
 $sexta   =5;
 $sabado  =6;
 
-var dump (date('d/m/Y')); //para fazer o debug
+var_dump (date('d/m/Y')); //para fazer o debug
 
 if (date('w')== 4){
     echo "quinta";

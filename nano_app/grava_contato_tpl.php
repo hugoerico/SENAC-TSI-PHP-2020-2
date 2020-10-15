@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1><?php echo $msg; ?></h1>
+    
     <br>
     <a href="index.html">voltar para o formulario</a>
 </body>

@@ -2,19 +2,12 @@
 
 require_once "db.php";
 
-$objStmt = $objBanco->prepare('INSERT INTO contatos
-(nome, whatsapp) Value(:nome ,:wzap )');
+$nome			    = $_POST['nome'];
+$whatsapp		        = $_POST['whats'];
+
+$objStmt = $objBanco->prepare("INSERT INTO contatos Value('$nome', '$whatsapp');");
 
 
-$objStmt->bindParam(':nome',$_POST['nome']);
-$objStmt->bindParam(':wzap',$_POST['whats']);
 
-if($objStmt->execute()){
-
-    $msg='obrigado';
-}
-else{
-    $msg='não deu';
-}
 
 include "grava_contato_tpl.php";
