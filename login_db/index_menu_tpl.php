@@ -1,8 +1,9 @@
 <br>
 <center>
-	<a href="../login_db/nps_tpl.php">NPS</a> 
-	<a href="../login_db/outro.php">Outro</a> 
-	<a href="../login_db/qualquer.php">Qualquer</a> 
-	<a href="../login_db/novo/umoutroainda.php">Um outro ainda</a> 
-	<a href="../login_db/sair.php">Sair</a> 
+    <a href="/SENAC-PHP-TSI-2020-2/login_db/nps_tpl.php">NPS</a>
+    <a href="/SENAC-PHP-TSI-2020-2/login_db/outro.php">Outro</a>
+    <a href="/SENAC-PHP-TSI-2020-2/login_db/qualquer.php">Qualquer</a>
+    <a href="/SENAC-PHP-TSI-2020-2/login_db/novo/umoutroainda.php">Um outro ainda</a>
+    <a href="/SENAC-PHP-TSI-2020-2/login_db/usuario/">Usuários</a>
+    <a href="/SENAC-PHP-TSI-2020-2/login_db/sair.php">Sair</a>
 </center>

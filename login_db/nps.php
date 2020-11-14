@@ -1,37 +1,41 @@
 <?php
 
-var_dump($_POST);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 require 'sessao.php';
 
 include 'header_tpl.php';
 include 'index_menu_tpl.php';
 
-session_start();
 
 $nota = $_POST['nota'];
-$explicacao = $_POST['registronota'];
+$explicacao = $_POST['explicacao'];
 
-$registroavaliacao = $objBanco->prepare('	INSERT INTO avaliacoes 
-									( nota, registronota)
+echo "<br><br>Você deu a nota $nota pelo motivo \"$explicacao\"";
+
+$db = new PDO(
+    'mysql:dbname=cmswp;host=localhost', // DSN
+    'root', // usuário 
+    '' // senha
+);
+
+$stmt = $db->prepare('	INSERT INTO nps 
+									( nota, explicacao)
 								VALUES 
-									( :nota, :textonota)');
+									( :nota, :explicacao)');
 
+$stmt->bindParam(':nota', $nota);
+$stmt->bindParam(':explicacao', $explicacao);
 
-$registroavaliacao->bindParam(':nota', $_POST['nota']);
-$registroavaliacao->bindParam(':textonota', $_POST['registronota']);
+if ($stmt->execute()) {
 
-
-if ($registroavaliacao->execute()) {
-
-	echo  '<br><br>Avaliação gravada com sucesso!';
+    echo '<br><br>Pesquisa gravada com sucesso!';
 } else {
 
-	echo '<br><br> :-( deu erro, tente novamente! ';
+    echo '<br><br> :-( deu erro, tente novamente! ';
 }
-
-
-
 
 echo '<br><br><a href="./agradecimento.php?nota=' . $nota . '">Seguir</a>';
 
