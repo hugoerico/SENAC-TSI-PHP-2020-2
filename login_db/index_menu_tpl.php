@@ -1,5 +1,6 @@
 <br>
 <center>
+    <img src="/SENAC-PHP-TSI-2020-2/login_db/usuario/view/imagens/<?php echo $foto; ?>" width='100'>
     <a href="/SENAC-PHP-TSI-2020-2/login_db/nps_tpl.php">NPS</a>
     <a href="/SENAC-PHP-TSI-2020-2/login_db/outro.php">Outro</a>
     <a href="/SENAC-PHP-TSI-2020-2/login_db/qualquer.php">Qualquer</a>
